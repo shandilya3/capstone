@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+It looks so cool !
+
+So here we go, this code does following in addition to previous work on rating
+
+1.  Replace any bad comment word with *** , list of  bad word I gave in the array , we can increase the lists
+
+$originals = array("douche","fuck","damn","fucking","darn","hate");
+$replacements = array("***","***","***");
+$comment = str_ireplace($originals,$replacements,$comment);
+
+2. Comment is getting saved and when the same user is logged in , he/she can see his/her comments and make changes
+
+3. It  uses following function to avoid security risk
+
+$comment = filter_var($str, FILTER_SANITIZE_STRING);
+trim($comment);
+$comment = stripslashes($comment);
+$comment = htmlspecialchars($comment);
+
+
+</body>
+</html>
