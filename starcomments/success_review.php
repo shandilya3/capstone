@@ -39,7 +39,7 @@ function test_input($comment) {
         return $comment;
 }
 function badWordFilter($comment){
-        $originals = array("douche","fuck","damn","fucking","darn","hate");
+        $originals = array("test1","test2","test3","test4","test5","test6");
         $replacements = array("***","***","***");
         $comment = str_ireplace($originals,$replacements,$comment);
         return $comment;
